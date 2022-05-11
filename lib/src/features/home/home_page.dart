@@ -13,7 +13,7 @@ class _HomePageState extends ConsumerState<HomePage> {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Center(
-        child: CircularProgressIndicator(),
+        child: Text("HOME PAGE"),
       ),
     );
   }

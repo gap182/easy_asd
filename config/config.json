@@ -1,0 +1,8 @@
+{
+    "runtimeType": "default",
+    "base_url": "https://api.arasaac.org/api",
+    "languages": [
+        "es",
+        "en"
+    ]
+}

@@ -16,7 +16,6 @@ class SplashPage extends StatefulHookConsumerWidget {
 class _SplashPageState extends ConsumerState<SplashPage> {
   @override
   void initState() {
-    WidgetsFlutterBinding.ensureInitialized();
     ref.read(splashPod.notifier).loadData();
     super.initState();
   }
@@ -27,11 +26,16 @@ class _SplashPageState extends ConsumerState<SplashPage> {
       splashPod,
       (previous, next) {
         next.when(
-            data: () {
-              context.go('/home');
-            },
-            loading: () {},
-            error: (err) => log(err.toString()));
+          data: () {
+            context.go('/home');
+          },
+          loading: () {},
+          error: (err) => ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              content: Text(err ?? 'UNKNOWN ERROR'),
+            ),
+          ),
+        );
       },
     );
     return const Scaffold(

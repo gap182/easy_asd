@@ -14,7 +14,9 @@ class ConfigNotifier extends StateNotifier<ConfigModel> {
       final configMap = json.decode(config);
       state = ConfigModel.fromJson(configMap);
     } catch (e) {
-      state = ConfigModel.error(e.toString());
+      print("ERROR: $e");
+
+      throw e;
     }
     return state;
   }

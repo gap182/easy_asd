@@ -1,6 +1,7 @@
 {
     "runtimeType": "default",
     "base_url": "https://api.arasaac.org/api",
+    "number_pictograms": 9207,
     "languages": [
         "es",
         "en"

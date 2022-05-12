@@ -12,22 +12,12 @@ _$_ConfigModel _$$_ConfigModelFromJson(Map<String, dynamic> json) =>
       languages: (json['languages'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList(),
-      $type: json['runtimeType'] as String?,
+      numberPictograms: json['number_pictograms'] as int?,
     );
 
 Map<String, dynamic> _$$_ConfigModelToJson(_$_ConfigModel instance) =>
     <String, dynamic>{
       'base_url': instance.baseUrl,
       'languages': instance.languages,
-      'runtimeType': instance.$type,
-    };
-
-_$_Error _$$_ErrorFromJson(Map<String, dynamic> json) => _$_Error(
-      json['err'] as String?,
-      $type: json['runtimeType'] as String?,
-    );
-
-Map<String, dynamic> _$$_ErrorToJson(_$_Error instance) => <String, dynamic>{
-      'err': instance.err,
-      'runtimeType': instance.$type,
+      'number_pictograms': instance.numberPictograms,
     };

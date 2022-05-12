@@ -9,9 +9,8 @@ class ConfigModel with _$ConfigModel {
   const factory ConfigModel({
     String? baseUrl,
     List<String>? languages,
+    int? numberPictograms,
   }) = _ConfigModel;
-
-  const factory ConfigModel.error(String? err) = _Error;
 
   factory ConfigModel.fromJson(Map<String, Object?> json) =>
       _$ConfigModelFromJson(json);
